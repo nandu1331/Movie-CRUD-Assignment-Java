@@ -65,4 +65,10 @@ public class MovieService {
                 .filter(m -> m.getReleaseYear() == year)
                 .collect(Collectors.toList());
     }
+
+    // 6. Add a New Movie
+    public void addMovie(Movie movie) {
+        movies.add(movie);
+        System.out.println("Movie added successfully.");
+    }
 }
