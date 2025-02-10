@@ -41,4 +41,13 @@ public class MovieService {
                 .limit(10)
                 .collect(Collectors.toList());
     }
+
+    // 3. Get Movies by Genre
+    public List<Movie> getMoviesByGenre(String genre) {
+        return movies.stream()
+                .filter(m -> m.getGenre().equalsIgnoreCase(genre))
+                .collect(Collectors.toList());
+    }
+
+
 }
