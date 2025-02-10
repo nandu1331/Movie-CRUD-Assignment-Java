@@ -95,5 +95,11 @@ public class MovieService {
         }
     }
 
-
+    // 10. Sort and Return 15 Movies by Release Year
+    public List<Movie> sortMoviesByReleaseYear() {
+        return movies.stream()
+                .sorted(Comparator.comparingInt(Movie::getReleaseYear))
+                .limit(15)
+                .collect(Collectors.toList());
+    }
 }
