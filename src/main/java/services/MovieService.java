@@ -71,4 +71,17 @@ public class MovieService {
         movies.add(movie);
         System.out.println("Movie added successfully.");
     }
+
+    // 8. Update Movie Rating
+    public void updateMovieRating(String movieId, float newRating) {
+        Optional<Movie> movie = movies.stream()
+                .filter(m -> m.getId().equalsIgnoreCase(movieId))
+                .findFirst();
+        if (movie.isPresent()) {
+            movie.get().setRating(newRating);
+            System.out.println("Rating updated successfully.");
+        } else {
+            System.out.println("Movie not found.");
+        }
+    }
 }
