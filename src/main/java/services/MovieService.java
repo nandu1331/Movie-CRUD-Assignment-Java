@@ -66,7 +66,14 @@ public class MovieService {
                 .collect(Collectors.toList());
     }
 
-    // 6. Add a New Movie
+    // 6. Get Movies by Release Year Range
+    public List<Movie> getMoviesByReleaseYearRange(int startYear, int endYear) {
+        return movies.stream()
+                .filter(m -> m.getReleaseYear() >= startYear && m.getReleaseYear() <= endYear)
+                .collect(Collectors.toList());
+    }
+
+    // 7. Add a New Movie
     public void addMovie(Movie movie) {
         movies.add(movie);
         System.out.println("Movie added successfully.");
