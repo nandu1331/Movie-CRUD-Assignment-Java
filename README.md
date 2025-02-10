@@ -40,26 +40,28 @@ The project is organized into a clean package structure, ensuring a clear separa
 ```
 Movie-CRUD-Assignment-Java/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── org/example/              # Main application entry point
-│   │   │   │   └── Main.java
-│   │   │   ├── Models/                   # Domain models
-│   │   │   │   ├── Movie.java
-│   │   │   │   ├── Actor.java
-│   │   │   │   └── Director.java
-│   │   │   ├── services/                 # Service classes (business logic)
-│   │   │   │   ├── MovieService.java
-│   │   │   │   ├── ActorService.java
-│   │   │   │   └── DirectorService.java
-│   │   │   └── utils/                    # Utility classes for CSV reading/parsing
-│   │   │       └── CsvReader.java
-├── resources/                          # CSV data files
+│   └── main/
+│       └── java/
+│           ├── org/
+│           │   └── example/
+│           │       └── Main.java
+│           ├── Models/
+│           │   ├── Movie.java
+│           │   ├── Actor.java
+│           │   └── Director.java
+│           ├── services/
+│           │   ├── MovieService.java
+│           │   ├── ActorService.java
+│           │   └── DirectorService.java
+│           └── utils/
+│               └── CsvReader.java
+├── resources/
 │   ├── movies.csv
 │   ├── actors.csv
 │   └── directors.csv
 ├── README.md
 └── LICENSE
+
 ```
 
 ---
