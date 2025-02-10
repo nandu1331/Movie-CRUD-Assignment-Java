@@ -155,6 +155,41 @@ D001,"Jane Director"
 - Duration must be positive
 - References must be valid
 
+## Work Flow
+
+### Getting Movie details
+![Screenshot 2025-02-10 231237](https://github.com/user-attachments/assets/3c550dd1-93f5-4bd8-917d-6b0814dec93d)
+
+### Getting Top Rated Movies
+![Screenshot 2025-02-10 231254](https://github.com/user-attachments/assets/9721d268-3abd-4399-b8cb-0105a0616703)
+
+### Getting Movies By Genre
+![Screenshot 2025-02-10 231237](https://github.com/user-attachments/assets/05c81eb3-10e9-4ab1-bfd7-b4779b13c25d)
+
+### Getting Movies By Year
+![Screenshot 2025-02-10 231338](https://github.com/user-attachments/assets/047b861b-b4fe-425a-8c34-2950056c403e)
+
+### Getting Movies in a year range
+![Screenshot 2025-02-10 231350](https://github.com/user-attachments/assets/4333e583-b896-420c-901c-5983ac2d40a3)
+
+### Adding new movie
+![Screenshot 2025-02-10 231350](https://github.com/user-attachments/assets/b709d779-9dc5-4127-89dc-41a1c3e67279)
+
+### Updating movie rating
+![Screenshot 2025-02-10 232036](https://github.com/user-attachments/assets/29fb91f0-16b7-4e0f-a8de-e837293bac37)
+
+### Deleting a movie
+![image](https://github.com/user-attachments/assets/190c6841-c14c-4e01-a7d0-afbaa7440630)
+
+### Directors with most number of movies
+![image](https://github.com/user-attachments/assets/2d927fe3-be7c-43d5-b469-26010ec62534)
+
+### Actors who acted in multiple movies
+![image](https://github.com/user-attachments/assets/23284e2b-0d9e-46bc-98ad-a21a7ab47ff2)
+
+### Getting Youngest actor and their movies
+![image](https://github.com/user-attachments/assets/5b283a67-428c-457d-9d1e-e05fcdfbc438)
+
 ## Installation
 
 ### Prerequisites
