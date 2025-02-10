@@ -59,5 +59,10 @@ public class MovieService {
                 .collect(Collectors.toList());
     }
 
-
+    // 5. Get Movies by Release Year
+    public List<Movie> getMoviesByReleaseYear(int year) {
+        return movies.stream()
+                .filter(m -> m.getReleaseYear() == year)
+                .collect(Collectors.toList());
+    }
 }
