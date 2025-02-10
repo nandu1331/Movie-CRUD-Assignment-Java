@@ -12,14 +12,9 @@ import java.util.stream.Collectors;
 
 public class MovieService {
     private List<Movie> movies;;
-    private Map<String, Actor> actors;
-    private Map<String, Director> director;
 
-    public MovieService(List<Movie> movies, Map<String, Actor> actors,
-                        Map<String, Director> director) {
+    public MovieService(List<Movie> movies) {
         this.movies = movies;
-        this.actors = actors;
-        this.director = director;
     }
 
     // 1. Get Movie Information (by ID or Title)
