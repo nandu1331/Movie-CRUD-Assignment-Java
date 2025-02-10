@@ -95,7 +95,7 @@ public class Movie {
             for (Actor actor: actors) {
                 actorNames.append(actor.getName()).append(", ");
             }
-            if (actorNames.length() > 0) {
+            if (!actorNames.isEmpty()) {
                 // remove trailing double quotes in the dataset
                 actorNames.setLength(actorNames.length() - 2);
             }
