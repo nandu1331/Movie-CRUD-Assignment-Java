@@ -15,7 +15,8 @@ public class MovieService {
     private Map<String, Actor> actors;
     private Map<String, Director> director;
 
-    public MovieService(List<Movie> movies, Map<String, Actor> actors, Map<String, Director> director) {
+    public MovieService(List<Movie> movies, Map<String, Actor> actors,
+                        Map<String, Director> director) {
         this.movies = movies;
         this.actors = actors;
         this.director = director;
@@ -24,7 +25,8 @@ public class MovieService {
     // 1. Get Movie Information (by ID or Title)
     public void getMovieInfo(String movieIdOrTitle) {
         Optional<Movie> movie = movies.stream()
-                .filter(m -> m.getId().equalsIgnoreCase(movieIdOrTitle) || m.getMovieTitle().equalsIgnoreCase(movieIdOrTitle))
+                .filter(m -> m.getId().equalsIgnoreCase(movieIdOrTitle)
+                        || m.getMovieTitle().equalsIgnoreCase(movieIdOrTitle))
                 .findFirst();
 
         if (movie.isPresent()) {
@@ -46,6 +48,14 @@ public class MovieService {
     public List<Movie> getMoviesByGenre(String genre) {
         return movies.stream()
                 .filter(m -> m.getGenre().equalsIgnoreCase(genre))
+                .collect(Collectors.toList());
+    }
+
+    // 4. Get Movies by Director
+    public List<Movie> getMoviesByDirector(String directorName) {
+        return movies.stream()
+                .filter(m -> m.getDirector() != null &&
+                        m.getDirector().getName().equalsIgnoreCase(directorName))
                 .collect(Collectors.toList());
     }
 
