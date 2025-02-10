@@ -2,12 +2,14 @@ package Models;
 import java.time.LocalDate;
 import java.time.Period;
 
+// Actor class
 public class Actor {
     private String id;
     private String name;
     private LocalDate dateOfBirth;
     private String nationality;
 
+    // Constructor Definition
     public Actor(String id, String name, LocalDate dateOfBirth, String nationality) {
         this.id = id;
         this.name = name;
@@ -15,6 +17,7 @@ public class Actor {
         this.nationality = nationality;
     }
 
+    // Setter and Getter Methods
     public String getId() {
         return id;
     }
@@ -54,6 +57,7 @@ public class Actor {
         return 0;
     }
 
+    // Overrided toString method to print movie data in required format
     @Override
     public String toString() {
         return "Actor: [id=" + id + ", name=" + name + ", Date of birth="
