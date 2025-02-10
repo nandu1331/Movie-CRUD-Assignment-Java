@@ -84,4 +84,16 @@ public class MovieService {
             System.out.println("Movie not found.");
         }
     }
+
+    // 9. Delete a Movie
+    public void deleteMovie(String movieId) {
+        boolean removed = movies.removeIf(m -> m.getId().equalsIgnoreCase(movieId));
+        if (removed) {
+            System.out.println("Movie removed successfully.");
+        } else {
+            System.out.println("Movie not found.");
+        }
+    }
+
+
 }
