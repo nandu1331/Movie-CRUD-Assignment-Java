@@ -33,4 +33,12 @@ public class MovieService {
             System.out.println("Movie not found");
         }
     }
+
+    // 2. Get Top 10 Rated Movies
+    public List<Movie> getTop10RatedMovies() {
+        return movies.stream()
+                .sorted(Comparator.comparingDouble(Movie::getRating).reversed())
+                .limit(10)
+                .collect(Collectors.toList());
+    }
 }
