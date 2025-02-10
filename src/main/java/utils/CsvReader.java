@@ -96,11 +96,17 @@ public class CsvReader {
             br.readLine();
 
             while ((line = br.readLine()) != null) {
-                String[] tokens = line.split(",");
-                if (tokens.length < 7) continue;
+                String[] tokens = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
                 String movieId = tokens[0];
                 String directorId = tokens[5];
                 String actorIdsStr = tokens[6];
+
+                // Remove surrounding quotes from actorIds if present
+                if (actorIdsStr.startsWith("\"") && actorIdsStr.endsWith("\"")) {
+                    actorIdsStr = actorIdsStr.substring(1, actorIdsStr.length() - 1);
+                }
+
+                // Find the corresponding movie
                 for (Movie movie : movies) {
                     if (movie.getId().equals(movieId)) {
                         // Sets director (if available)
